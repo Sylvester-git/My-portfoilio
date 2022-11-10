@@ -31,8 +31,6 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          DarkmodeOn ? Theme.of(context).scaffoldBackgroundColor : Colors.white,
       appBar: AppBar(
         elevation: 0,
         backgroundColor: const Color(0xFF0E3352),

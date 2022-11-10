@@ -93,8 +93,10 @@ class Homescreen extends StatelessWidget {
                 color: Colors.lightBlue.shade100.withOpacity(0.1),
               ),
               height: 490,
-              child: const Center(
-                child: Text('Picture'),
+              child: const FlutterLogo(
+                size: 150,
+                textColor: Colors.grey,
+                style: FlutterLogoStyle.horizontal,
               ),
             ),
           )

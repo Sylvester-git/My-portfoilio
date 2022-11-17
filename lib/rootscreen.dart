@@ -4,6 +4,7 @@ import 'package:my_portfolio/screens/about.dart';
 import 'package:my_portfolio/screens/contact.dart';
 import 'package:my_portfolio/screens/services.dart';
 import 'package:my_portfolio/screens/skills.dart';
+import './constants/colors.dart';
 
 class Homepage extends StatefulWidget {
   @override
@@ -11,12 +12,12 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  List<Widget> screens = const [
-    Homescreen(),
+  List<Widget> screens = [
+    const Homescreen(),
     Aboutscreen(),
     Servicesscreen(),
     Skillscsreen(),
-    Contactscreen(),
+    const Contactscreen(),
   ];
 
   int pageindex = 0;
@@ -33,19 +34,19 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFF0E3352),
+        backgroundColor: Appcolors.wbgcolor,
         title: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: Row(
-            children: const [
+            children: [
               Text(
                 'Portfo',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Appcolors.bcolor,
                   fontSize: 25,
                 ),
               ),
-              Text(
+              const Text(
                 'lio',
                 style: TextStyle(
                   color: Colors.lightBlue,
@@ -85,10 +86,10 @@ class _HomepageState extends State<Homepage> {
                     ),
                     height: 40,
                     width: 70,
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Home',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Appcolors.bcolor),
                       ),
                     ),
                   ),
@@ -112,10 +113,10 @@ class _HomepageState extends State<Homepage> {
                           ? Colors.lightBlue
                           : Colors.transparent,
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'About',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Appcolors.bcolor),
                       ),
                     ),
                   ),
@@ -139,10 +140,10 @@ class _HomepageState extends State<Homepage> {
                           ? Colors.lightBlue
                           : Colors.transparent,
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Services',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Appcolors.bcolor),
                       ),
                     ),
                   ),
@@ -156,20 +157,22 @@ class _HomepageState extends State<Homepage> {
                       pageindex = 3;
                     });
                   },
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 500),
-                    height: 40,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: pageindex == 3
-                          ? Colors.lightBlue
-                          : Colors.transparent,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Skills',
-                        style: TextStyle(color: Colors.white),
+                  child: MouseRegion(
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 500),
+                      height: 40,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: pageindex == 3
+                            ? Colors.lightBlue
+                            : Colors.transparent,
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Skills',
+                          style: TextStyle(color: Appcolors.bcolor),
+                        ),
                       ),
                     ),
                   ),
@@ -193,10 +196,10 @@ class _HomepageState extends State<Homepage> {
                           ? Colors.lightBlue
                           : Colors.transparent,
                     ),
-                    child: const Center(
+                    child: Center(
                       child: Text(
                         'Contact',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Appcolors.bcolor),
                       ),
                     ),
                   ),
@@ -222,9 +225,10 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       body: Container(
-        color: const Color(0xFF0E3352),
+        color: Appcolors.wbgcolor,
         height: MediaQuery.of(context).size.height,
         child: PageView.builder(
+          physics: NeverScrollableScrollPhysics(),
           controller: controller,
           onPageChanged: (value) {
             setState(() {

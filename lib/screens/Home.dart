@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/constants/colors.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -10,7 +11,7 @@ class Homescreen extends StatelessWidget {
         bottom: 10,
       ),
       height: 500,
-      // color: Colors.amber,
+      //color: Colors.amber,
       child: Row(
         children: [
           Container(
@@ -20,7 +21,7 @@ class Homescreen extends StatelessWidget {
             // ),
             height: 300,
             width: 400,
-            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
             padding: const EdgeInsets.all(15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,30 +29,30 @@ class Homescreen extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                const Text(
+                 Text(
                   'Hello, my name is',
-                  style: TextStyle(fontSize: 24, color: Colors.white),
+                  style: TextStyle(fontSize: 24, color: Appcolors.bcolor),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
+                 Text(
                   'Sylvester-Paul David',
-                  style: TextStyle(fontSize: 40, color: Colors.white),
+                  style: TextStyle(fontSize: 40, color: Appcolors.bcolor),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
                 Row(
-                  children: const [
-                    Text(
+                  children: [
+           Text(
                       "And I'm a ",
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.white,
+                        color: Appcolors.bcolor,
                       ),
                     ),
-                    Text(
+          const  Text(
                       "Flutter Developer",
                       style: TextStyle(
                         fontSize: 24,
@@ -71,11 +72,11 @@ class Homescreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.lightBlue,
                       ),
-                      child: const Center(
+                      child:Center(
                         child: Text(
                           'Hire me',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Appcolors.bcolor,
                           ),
                         ),
                       )),
@@ -88,14 +89,10 @@ class Homescreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.lightBlue.shade100.withOpacity(0.1),
-              ),
               height: 490,
-              child: const FlutterLogo(
+              child:  FlutterLogo(
                 size: 150,
-                textColor: Colors.grey,
+                textColor: Appcolors.bcolor,
                 style: FlutterLogoStyle.horizontal,
               ),
             ),

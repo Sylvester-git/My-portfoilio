@@ -1,96 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/Widgets/skillbar.dart';
+import 'package:my_portfolio/models/skillbar.dart';
+import '../constants/colors.dart';
 
 class Skillscsreen extends StatelessWidget {
-  const Skillscsreen({super.key});
-
+  List<skillbar> skills = [
+    skillbar(skilltitle: 'Flutter', progresspercentage: 34),
+    skillbar(skilltitle: 'Python', progresspercentage: 89),
+    skillbar(skilltitle: 'C/C++', progresspercentage: 54),
+    skillbar(skilltitle: 'Arduino', progresspercentage: 20)
+  ];
   @override
   Widget build(BuildContext context) {
-     return Container(
-        margin: EdgeInsets.only(bottom: 10,),
-      height: 600,
-      color: Colors.amber,
-      child: Row(
-        children: [
-          Container(
-            color: Colors.yellow,
-            height: 300,
-            width: 400,
-            margin: EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 50,
+    return Container(
+        margin: const EdgeInsets.only(
+          bottom: 10,
+        ),
+        height: 600,
+        //color: Colors.amber,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(35, 30, 0, 10),
+              child: Text(
+                'Skill Levels',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Appcolors.bcolor,
                 ),
-                Text(
-                  'Hello, my name is',
-                  style: TextStyle(fontSize: 24, color: Colors.white),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  'Sylvester-Paul David',
-                  style: TextStyle(fontSize: 40, color: Colors.white),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      "And I'm a ",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      "Flutter Developer",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.lightBlue,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                GestureDetector(
-                  child: Container(
-                      width: 100,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.lightBlue,
-                      ),
-                      child: Center(
-                        child: Text(
-                          'Hire me',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      )),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 150,
-          ),
-          Expanded(
-            child: Container(
-              color: Colors.yellow,
-              height: 490,
-              child: Center(
-                child: Text('Picture'),
               ),
             ),
-          )
-        ],
-      ),
-    );
+            Container(
+                height: 450,
+                margin: const EdgeInsets.only(
+                  top: 10,
+                  left: 35,
+                ),
+                width: MediaQuery.of(context).size.width,
+                child: ListView.separated(
+                    separatorBuilder: (context, index) {
+                      return const SizedBox(
+                        height: 10,
+                      );
+                    },
+                    itemCount: skills.length,
+                    itemBuilder: (context, i) {
+                      return Skillbarwidget(
+                        progresspercentage: skills[i].progresspercentage,
+                        skilltitle: skills[i].skilltitle,
+                      );
+                    }))
+          ],
+        ));
   }
 }

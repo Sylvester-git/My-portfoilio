@@ -29,14 +29,14 @@ class Homescreen extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                 Text(
+                Text(
                   'Hello, my name is',
                   style: TextStyle(fontSize: 24, color: Appcolors.bcolor),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                 Text(
+                Text(
                   'Sylvester-Paul David',
                   style: TextStyle(fontSize: 40, color: Appcolors.bcolor),
                 ),
@@ -45,14 +45,14 @@ class Homescreen extends StatelessWidget {
                 ),
                 Row(
                   children: [
-           Text(
+                    Text(
                       "And I'm a ",
                       style: TextStyle(
                         fontSize: 24,
                         color: Appcolors.bcolor,
                       ),
                     ),
-          const  Text(
+                    const Text(
                       "Flutter Developer",
                       style: TextStyle(
                         fontSize: 24,
@@ -72,7 +72,7 @@ class Homescreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.lightBlue,
                       ),
-                      child:Center(
+                      child: Center(
                         child: Text(
                           'Hire me',
                           style: TextStyle(
@@ -90,7 +90,7 @@ class Homescreen extends StatelessWidget {
           Expanded(
             child: Container(
               height: 490,
-              child:  FlutterLogo(
+              child: FlutterLogo(
                 size: 150,
                 textColor: Appcolors.bcolor,
                 style: FlutterLogoStyle.horizontal,

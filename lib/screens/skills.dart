@@ -5,10 +5,10 @@ import '../constants/colors.dart';
 
 class Skillscsreen extends StatelessWidget {
   List<skillbar> skills = [
-    skillbar(skilltitle: 'Flutter', progresspercentage: 34),
-    skillbar(skilltitle: 'Python', progresspercentage: 89),
+    skillbar(skilltitle: 'Flutter', progresspercentage: 70),
+    skillbar(skilltitle: 'Python', progresspercentage: 60),
     skillbar(skilltitle: 'C/C++', progresspercentage: 54),
-    skillbar(skilltitle: 'Arduino', progresspercentage: 20)
+    // skillbar(skilltitle: 'Arduino', progresspercentage: 20)
   ];
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class Skillscsreen extends StatelessWidget {
         margin: const EdgeInsets.only(
           bottom: 10,
         ),
-        height: 600,
+        height: 550,
         //color: Colors.amber,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

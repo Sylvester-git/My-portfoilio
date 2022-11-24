@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Servicecard extends StatelessWidget {
   String servicename;
@@ -19,10 +21,16 @@ class Servicecard extends StatelessWidget {
       ),
       width: 400,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Appcolors.wbglight),
+        borderRadius: BorderRadius.circular(10),
+        color: Appcolors.overlay,
+        border: Border.all(
+          color: Colors.blue.shade400,
+          width: 1,
+        ),
+      ),
       child: Column(
         children: [
-          //iamge
+          //image
           Container(
             width: double.infinity,
             height: 250,
@@ -30,12 +38,31 @@ class Servicecard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                imageurl,
-                fit: BoxFit.cover,
-              ),
-            ),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
+                child: CachedNetworkImage(
+                  imageUrl: imageurl,
+                  imageBuilder: (context, imageProvider) {
+                    return Image.network(
+                      imageurl,
+                      fit: BoxFit.cover,
+                    );
+                  },
+                  width: double.infinity,
+                  placeholder: (context, url) {
+                    return Center(
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        child: CircularProgressIndicator(
+                          color: Colors.lightBlue.shade300,
+                        ),
+                      ),
+                    );
+                  },
+                )),
           ),
           //Information
           Column(
@@ -53,10 +80,7 @@ class Servicecard extends StatelessWidget {
                 child: Text(
                   servicename,
                   softWrap: true,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Appcolors.bcolor,
-                  ),
+                  style: Theme.of(context).textTheme.headline6,
                 ),
               ),
               Container(
@@ -77,10 +101,10 @@ class Servicecard extends StatelessWidget {
                     ),
                     Text(
                       toolused,
-                      style: TextStyle(
-                        fontSize: 17,
-                        color: Appcolors.bcolor,
-                      ),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline6!
+                          .copyWith(fontWeight: FontWeight.bold),
                     )
                   ],
                 ),

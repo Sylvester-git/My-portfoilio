@@ -2,7 +2,8 @@
   "projects": {
     "default": "portfolio-40fd4",
     "portfoilio": "portfolio-40fd4",
-    "portfolio": "portfolio-40fd4"
+    "portfolio": "portfolio-40fd4",
+    "flutter-web-portfoilio": "flutter-web-portfolio-81a4e"
   },
   "targets": {},
   "etags": {}

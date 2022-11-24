@@ -2,24 +2,19 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import '../../constants/aboutimageurl.dart';
 import '../../constants/colors.dart';
 
 class TabletAboutscreen extends StatelessWidget {
-  List<String> imageurl = [
-    'https://images.pexels.com/photos/4246446/pexels-photo-4246446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    'https://images.pexels.com/photos/1142941/pexels-photo-1142941.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/6153738/pexels-photo-6153738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-  ];
+  const TabletAboutscreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
         top: 10,
       ),
-      // color: Colors.amber,
+      //color: Colors.amber,
       height: 720,
       padding: const EdgeInsets.all(20),
       child: Column(
@@ -46,7 +41,7 @@ class TabletAboutscreen extends StatelessWidget {
             style:
                 GoogleFonts.varelaRound(fontSize: 24, color: Appcolors.bcolor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -59,7 +54,7 @@ class TabletAboutscreen extends StatelessWidget {
                   ),
                   height: 400,
                   width: 400,
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     horizontal: 10,
                   ),
                   child: CarouselSlider(
@@ -80,11 +75,11 @@ class TabletAboutscreen extends StatelessWidget {
                                 width: double.infinity,
                                 placeholder: (context, url) {
                                   return Center(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(
-                                        color: Colors.lightBlue.shade300,
+                                        color: Appcolors.circularprogress,
                                       ),
                                     ),
                                   );
@@ -106,11 +101,11 @@ class TabletAboutscreen extends StatelessWidget {
                                 width: double.infinity,
                                 placeholder: (context, url) {
                                   return Center(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(
-                                        color: Colors.lightBlue.shade300,
+                                        color: Appcolors.circularprogress,
                                       ),
                                     ),
                                   );
@@ -132,11 +127,11 @@ class TabletAboutscreen extends StatelessWidget {
                                 width: double.infinity,
                                 placeholder: (context, url) {
                                   return Center(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(
-                                        color: Colors.lightBlue.shade300,
+                                        color: Appcolors.circularprogress,
                                       ),
                                     ),
                                   );
@@ -158,11 +153,11 @@ class TabletAboutscreen extends StatelessWidget {
                                 width: double.infinity,
                                 placeholder: (context, url) {
                                   return Center(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(
-                                        color: Colors.lightBlue.shade300,
+                                        color: Appcolors.circularprogress,
                                       ),
                                     ),
                                   );
@@ -184,11 +179,11 @@ class TabletAboutscreen extends StatelessWidget {
                                 width: double.infinity,
                                 placeholder: (context, url) {
                                   return Center(
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 30,
                                       width: 30,
                                       child: CircularProgressIndicator(
-                                        color: Colors.lightBlue.shade300,
+                                        color: Appcolors.circularprogress,
                                       ),
                                     ),
                                   );

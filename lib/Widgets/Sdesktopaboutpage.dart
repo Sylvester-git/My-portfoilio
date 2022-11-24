@@ -2,16 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import '../constants/aboutimageurl.dart';
 import '../constants/colors.dart';
-
-List<String> imageurl = [
-  'https://images.pexels.com/photos/4246446/pexels-photo-4246446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/1865131/pexels-photo-1865131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/4792733/pexels-photo-4792733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/1142941/pexels-photo-1142941.jpeg?auto=compress&cs=tinysrgb&w=600',
-  'https://images.pexels.com/photos/6153738/pexels-photo-6153738.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-];
 
 Widget Sdesktopaboutpage(BuildContext context) {
   return Row(
@@ -85,11 +77,11 @@ Widget Sdesktopaboutpage(BuildContext context) {
                         width: double.infinity,
                         placeholder: (context, url) {
                           return Center(
-                            child: Container(
+                            child: SizedBox(
                               height: 30,
                               width: 30,
                               child: CircularProgressIndicator(
-                                color: Colors.lightBlue.shade300,
+                                color: Appcolors.circularprogress,
                               ),
                             ),
                           );
@@ -111,11 +103,11 @@ Widget Sdesktopaboutpage(BuildContext context) {
                         width: double.infinity,
                         placeholder: (context, url) {
                           return Center(
-                            child: Container(
+                            child: SizedBox(
                               height: 30,
                               width: 30,
                               child: CircularProgressIndicator(
-                                color: Colors.lightBlue.shade300,
+                                color: Appcolors.circularprogress,
                               ),
                             ),
                           );
@@ -137,11 +129,11 @@ Widget Sdesktopaboutpage(BuildContext context) {
                         width: double.infinity,
                         placeholder: (context, url) {
                           return Center(
-                            child: Container(
+                            child: SizedBox(
                               height: 30,
                               width: 30,
                               child: CircularProgressIndicator(
-                                color: Colors.lightBlue.shade300,
+                                color: Appcolors.circularprogress,
                               ),
                             ),
                           );
@@ -163,11 +155,11 @@ Widget Sdesktopaboutpage(BuildContext context) {
                         width: double.infinity,
                         placeholder: (context, url) {
                           return Center(
-                            child: Container(
+                            child: SizedBox(
                               height: 30,
                               width: 30,
                               child: CircularProgressIndicator(
-                                color: Colors.lightBlue.shade300,
+                                color: Appcolors.circularprogress,
                               ),
                             ),
                           );
@@ -189,11 +181,11 @@ Widget Sdesktopaboutpage(BuildContext context) {
                         width: double.infinity,
                         placeholder: (context, url) {
                           return Center(
-                            child: Container(
+                            child: SizedBox(
                               height: 30,
                               width: 30,
                               child: CircularProgressIndicator(
-                                color: Colors.lightBlue.shade300,
+                                color: Appcolors.circularprogress,
                               ),
                             ),
                           );

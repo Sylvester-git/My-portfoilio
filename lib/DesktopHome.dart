@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/Widgets/appbar.dart';
 import 'package:my_portfolio/screens/Desktop/Home.dart';
 import 'package:my_portfolio/screens/Desktop/about.dart';
 import 'package:my_portfolio/screens/Desktop/services.dart';
@@ -17,31 +18,12 @@ class HomepageDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Appcolors.wbgcolor,
-        title: Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: RichText(
-              text: TextSpan(children: <TextSpan>[
-                TextSpan(
-                  text: 'Portfo',
-                  style: Theme.of(context).appBarTheme.titleTextStyle,
-                ),
-                TextSpan(
-                  text: 'lio',
-                  style: Theme.of(context).appBarTheme.titleTextStyle!.copyWith(
-                        color: Colors.blue.shade400,
-                      ),
-                )
-              ]),
-            )),
-      ),
+      appBar: customappbar(context),
       body: Container(
           color: Appcolors.wbgcolor,
           height: MediaQuery.of(context).size.height,
           child: ListView.builder(
-              physics: const BouncingScrollPhysics(),
+             
               controller: listviewcontroller,
               key: ValueKey(screens.length),
               itemCount: screens.length,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/Widgets/skillcard.dart';
+
+import '../../Widgets/skillcard.dart';
 import '../../constants/skills.dart';
 
-class DesktopSkillscsreen extends StatelessWidget {
+class TabletSkillscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +11,7 @@ class DesktopSkillscsreen extends StatelessWidget {
           bottom: 10,
         ),
         height: 550,
-        // color: Colors.red,
+        //color: Colors.red,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

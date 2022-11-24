@@ -79,7 +79,7 @@ class SkillCardwidget extends StatelessWidget {
                   radius: 25,
                   lineWidth: 2,
                   backgroundColor: Appcolors.wbgcolor,
-                  progressColor: Colors.blue,
+                  progressColor: Appcolors.progressbarcomplete,
                   center: Text('$progresspercentage%'),
                   percent: (progresscomplete / (progresscomplete * 100)) *
                       progresspercentage,

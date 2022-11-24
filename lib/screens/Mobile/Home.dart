@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio/constants/contact.dart';
 
 import '../../constants/colors.dart';
-import '../../constants/contact.dart';
 
-class TabletHomescreen extends StatelessWidget {
-  const TabletHomescreen({super.key});
+class MobileHomescreen extends StatelessWidget {
+  const MobileHomescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
         bottom: 10,
-        top: 30,
+        top: 20,
       ),
-      height: 350,
-      // color: Colors.amber,
+      height: 280,
+      //color: Colors.amber,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
@@ -37,7 +37,7 @@ class TabletHomescreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 50,
+              height: 20,
             ),
             SelectableText.rich(
               TextSpan(
@@ -45,13 +45,13 @@ class TabletHomescreen extends StatelessWidget {
                   style: GoogleFonts.quicksand(
                     color: Appcolors.bcolor,
                     fontWeight: FontWeight.w400,
-                    fontSize: 26,
+                    fontSize: 20,
                   ),
                   children: [
                     TextSpan(
                       text: '\nSylvester-Paul\n',
                       style: GoogleFonts.quicksand(
-                        fontSize: 35,
+                        fontSize: 25,
                         fontWeight: FontWeight.w400,
                         color: Appcolors.bcolor,
                       ),
@@ -59,7 +59,7 @@ class TabletHomescreen extends StatelessWidget {
                     TextSpan(
                       text: 'David',
                       style: GoogleFonts.quicksand(
-                        fontSize: 35,
+                        fontSize: 25,
                         fontWeight: FontWeight.w400,
                         color: Appcolors.bcolor,
                       ),

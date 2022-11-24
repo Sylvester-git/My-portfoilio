@@ -3,9 +3,10 @@ import 'package:my_portfolio/Widgets/Ldesktopaboutpage.dart';
 import 'package:my_portfolio/Widgets/Sdesktopaboutpage.dart';
 
 class DesktopAboutscreen extends StatelessWidget {
+  const DesktopAboutscreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    double screenwidth = MediaQuery.of(context).size.width;
     return Container(
       margin: const EdgeInsets.only(
         bottom: 10,

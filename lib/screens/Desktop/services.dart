@@ -1,26 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Widgets/servicecard.dart';
-import 'package:my_portfolio/constants/colors.dart';
-import 'package:my_portfolio/models/services.dart';
+import '../../constants/services.dart';
 
 class DesktopServicesscreen extends StatelessWidget {
-  List<services> my_services = [
-    services(
-        servicename: 'Cross Platform Mobile Application Development.',
-        toolused: 'Flutter and Firebase',
-        imageurl:
-            'https://images.pexels.com/photos/4549408/pexels-photo-4549408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-    services(
-        servicename: 'Website Development.',
-        toolused: 'Flutter',
-        imageurl:
-            'https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
-    services(
-        servicename: 'Machine learning and AI development.',
-        toolused: 'C++  and Python',
-        imageurl:
-            'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
-  ];
+  const DesktopServicesscreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +17,7 @@ class DesktopServicesscreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.fromLTRB(35, 30, 0, 10),
+              padding: const EdgeInsets.fromLTRB(35, 30, 0, 10),
               child: Text(
                 'My services include',
                 style: Theme.of(context).textTheme.headline4,

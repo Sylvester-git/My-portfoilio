@@ -49,8 +49,8 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         home: ScreenTypeLayout(
-          mobile: const HomepageMobile(),
-          tablet: const HomepageTablet(),
+          mobile: HomepageMobile(),
+          tablet: HomepageTablet(),
           desktop: HomepageDesktop(),
         ));
   }

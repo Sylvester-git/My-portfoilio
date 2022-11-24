@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/constants/colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:my_portfolio/constants/contact.dart';
 
 class DesktopHomescreen extends StatelessWidget {
   const DesktopHomescreen({super.key});
@@ -22,7 +22,7 @@ class DesktopHomescreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(19),
               color: Appcolors.overlay,
               border: Border.all(
-                color: Colors.blue.shade400,
+                color: Appcolors.bordercolor,
                 width: 1,
               ),
             ),
@@ -91,30 +91,7 @@ class DesktopHomescreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {},
-                        icon: const FaIcon(
-                          FontAwesomeIcons.whatsapp,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const FaIcon(
-                          FontAwesomeIcons.linkedin,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const FaIcon(
-                          FontAwesomeIcons.github,
-                        )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const FaIcon(
-                          FontAwesomeIcons.instagram,
-                        )),
-                  ],
-                )
+                contactme()
               ],
             ),
           ),

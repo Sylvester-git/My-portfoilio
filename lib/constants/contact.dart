@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portfolio/Widgets/contactmecontainer.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
-Future<void> whatsappcontact() async {
-  String whatsappnumber = 'https://wa.me/+2347036600085';
-  if (await canLaunchUrlString(whatsappnumber)) {
-    await launchUrlString(whatsappnumber);
+whatsappcontact() async {
+  final Uri whatsappnumber = Uri.parse('https://wa.me/+2347036600085');
+  if (await canLaunchUrl(whatsappnumber)) {
+    await launchUrl(whatsappnumber);
   } else {
     throw 'could not load';
   }
 }
 
-Future<void> linkind() async {
-  String linkedin =
-      'https://www.linkedin.com/in/sylvester-paul-ebinehita-1176ab221';
-  if (await canLaunchUrlString(linkedin)) {
-    await launchUrlString(linkedin);
+linkind() async {
+  final Uri linkedin = Uri.parse(
+      'https://www.linkedin.com/in/sylvester-paul-ebinehita-1176ab221');
+  if (await canLaunchUrl(linkedin)) {
+    await launchUrl(linkedin);
   } else {
     throw 'could not launch';
   }
 }
 
-Future<void> github() async {
-  String github = 'https://github.com/Itzspd?tab=repositories';
-  if (await canLaunchUrlString(github)) {
-    await launchUrlString(github);
+github() async {
+  final Uri git_hub = Uri.parse('https://github.com/Itzspd?tab=repositories');
+  if (await canLaunchUrl(git_hub)) {
+    await launchUrl(git_hub);
   } else {
     throw 'could not launch';
   }
@@ -33,22 +33,22 @@ Future<void> github() async {
 
 Widget contactme() {
   return Row(
-    children: const [
-      IconButton(
-          onPressed: whatsappcontact,
-          icon: FaIcon(
-            FontAwesomeIcons.whatsapp,
-          )),
-      IconButton(
-          onPressed: linkind,
-          icon: FaIcon(
-            FontAwesomeIcons.linkedin,
-          )),
-      IconButton(
-          onPressed: github,
-          icon: FaIcon(
-            FontAwesomeIcons.github,
-          )),
+    children: [
+      contactmecontainer(
+        whatsappcontact,
+        FontAwesomeIcons.whatsapp,
+      ),
+      const SizedBox(
+        width: 10,
+      ),
+      contactmecontainer(
+        linkind,
+        FontAwesomeIcons.linkedin,
+      ),
+      const SizedBox(
+        width: 10,
+      ),
+      contactmecontainer(github, FontAwesomeIcons.github),
     ],
   );
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../constants/colors.dart';
 import '../../constants/contact.dart';
 
@@ -49,25 +48,17 @@ class TabletHomescreen extends StatelessWidget {
                   ),
                   children: [
                     TextSpan(
-                      text: '\nSylvester-Paul\n',
+                      text: '\nSylvester-Paul David',
                       style: GoogleFonts.quicksand(
                         fontSize: 35,
                         fontWeight: FontWeight.w400,
                         color: Appcolors.bcolor,
                       ),
                     ),
-                    TextSpan(
-                      text: 'David',
-                      style: GoogleFonts.quicksand(
-                        fontSize: 35,
-                        fontWeight: FontWeight.w400,
-                        color: Appcolors.bcolor,
-                      ),
-                    )
                   ]),
             ),
             const SizedBox(
-              height: 2,
+              height: 10,
             ),
             Row(
               children: [
@@ -89,7 +80,7 @@ class TabletHomescreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 15,
+              height: 30,
             ),
             contactme()
           ],

@@ -12,10 +12,10 @@ class MobileHomescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
-        bottom: 10,
+        bottom: 20,
         top: 20,
       ),
-      height: 280,
+      height: 300,
       //color: Colors.amber,
       child: Container(
         decoration: BoxDecoration(
@@ -29,7 +29,7 @@ class MobileHomescreen extends StatelessWidget {
         height: 300,
         width: 300,
         margin: const EdgeInsets.symmetric(
-          horizontal: 30,
+          horizontal: 20,
         ),
         padding: const EdgeInsets.all(15),
         child: Column(

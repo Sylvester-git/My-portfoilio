@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:my_portfolio/Widgets/skillcard.dart';
 import 'package:my_portfolio/constants/skills.dart';
 
@@ -7,67 +8,48 @@ class Mobileskillscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Container(
+      margin: const EdgeInsets.only(
+        bottom: 40,
+      ),
+      //  color: Colors.brown,
       child: Container(
-        margin: const EdgeInsets.only(
-          bottom: 40,
+        width: 300,
+        margin: const EdgeInsets.symmetric(
+          horizontal: 20,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 26,
-                vertical: 5,
-              ),
-              child: Text(
-                'Skill Levels',
-                style: Theme.of(context).textTheme.headline4!.copyWith(
-                      fontSize: 24,
-                    ),
-              ),
+            Text(
+              'Skill Levels',
+              style: Theme.of(context).textTheme.headline4!.copyWith(
+                    fontSize: 24,
+                  ),
             ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 10),
-              //  color: Colors.yellow,
-              height: 400,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 26,
-              ),
-              width: MediaQuery.of(context).size.width,
-              child: SkillCardwidget(
-                skilltitle: skills[0].skilltitle,
-                svgurl: skills[0].svgurl,
-                progresspercentage: skills[0].progresspercentage,
-              ),
+            const SizedBox(
+              height: 10,
             ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 10),
-              // color: Colors.yellow,
-              height: 400,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 26,
-              ),
-              width: MediaQuery.of(context).size.width,
-              child: SkillCardwidget(
-                skilltitle: skills[1].skilltitle,
-                svgurl: skills[1].svgurl,
-                progresspercentage: skills[1].progresspercentage,
-              ),
+            SkillCardwidget(
+              skilltitle: skills[0].skilltitle,
+              svgurl: skills[0].svgurl,
+              progresspercentage: skills[0].progresspercentage,
             ),
-            Container(
-              margin: const EdgeInsets.only(bottom: 10),
-              // color: Colors.yellow,
-              height: 400,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 26,
-              ),
-              width: MediaQuery.of(context).size.width,
-              child: SkillCardwidget(
-                skilltitle: skills[2].skilltitle,
-                svgurl: skills[2].svgurl,
-                progresspercentage: skills[2].progresspercentage,
-              ),
+            const SizedBox(
+              height: 10,
+            ),
+            SkillCardwidget(
+              skilltitle: skills[1].skilltitle,
+              svgurl: skills[1].svgurl,
+              progresspercentage: skills[1].progresspercentage,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SkillCardwidget(
+              skilltitle: skills[2].skilltitle,
+              svgurl: skills[2].svgurl,
+              progresspercentage: skills[2].progresspercentage,
             ),
           ],
         ),

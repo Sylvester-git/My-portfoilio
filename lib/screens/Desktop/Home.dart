@@ -49,21 +49,13 @@ class DesktopHomescreen extends StatelessWidget {
                       ),
                       children: [
                         TextSpan(
-                          text: '\nSylvester-Paul\n',
+                          text: '\nSylvester-Paul David',
                           style: GoogleFonts.quicksand(
                             fontSize: 35,
                             fontWeight: FontWeight.w400,
                             color: Appcolors.bcolor,
                           ),
                         ),
-                        TextSpan(
-                          text: 'David',
-                          style: GoogleFonts.quicksand(
-                            fontSize: 35,
-                            fontWeight: FontWeight.w400,
-                            color: Appcolors.bcolor,
-                          ),
-                        )
                       ]),
                 ),
                 const SizedBox(
@@ -101,7 +93,6 @@ class DesktopHomescreen extends StatelessWidget {
           Expanded(
             child: Container(
               margin: const EdgeInsets.only(right: 30),
-              height: 490,
               child: FlutterLogo(
                 size: 150,
                 textColor: Appcolors.bcolor,

@@ -37,7 +37,7 @@ class TabletAboutscreen extends StatelessWidget {
             height: 20,
           ),
           SelectableText(
-            'I am a Flutter Developer from Nigeria with over 2 years of experience using flutter.\nI am well versed in UI designing using flutter, state management using bloc, database management using firbase, app logic using dart programming language, and also using the flutter packages to bring dream app ideas to life.',
+            'I am a Flutter Developer from Nigeria with over 2 years of experience using flutter.\nI am well versed in UI designing using flutter, state management using bloc, database management using firebase, app logic using dart programming language, and also using the flutter packages to bring dream app ideas to life.',
             style:
                 GoogleFonts.varelaRound(fontSize: 24, color: Appcolors.bcolor),
           ),

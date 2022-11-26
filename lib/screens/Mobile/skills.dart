@@ -10,7 +10,7 @@ class Mobileskillscreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(
-        bottom: 40,
+        bottom: 70,
       ),
       //  color: Colors.brown,
       child: Container(

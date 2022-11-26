@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/MobileHome.dart';
 import 'package:my_portfolio/TabletHome.dart';
 import 'package:my_portfolio/constants/colors.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'DesktopHome.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitDown,
+    DeviceOrientation.portraitUp,
+  ]);
+  setPathUrlStrategy();
   await Firebase.initializeApp(
       options: const FirebaseOptions(
     apiKey: "AIzaSyCf8x9NWTZtRq-8_auraesl3NowTiqlz84",

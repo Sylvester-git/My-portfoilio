@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:my_portfolio/MobileHome.dart';
-import 'package:my_portfolio/TabletHome.dart';
-import 'package:my_portfolio/constants/colors.dart';
-import 'package:url_strategy/url_strategy.dart';
-import 'DesktopHome.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+import './packages.dart';
+import 'App/root.dart';
+import 'App/Core/constants/constantsExports.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,32 +28,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          scaffoldBackgroundColor: const Color(0xFF0E3352),
-          textTheme: TextTheme(
-              headline4: GoogleFonts.varelaRound(
-                fontSize: 40,
-                fontWeight: FontWeight.w500,
-                color: Appcolors.bcolor,
-              ),
-              headline6: GoogleFonts.quicksand(
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
-                color: Appcolors.bcolor,
-              )),
-          appBarTheme: AppBarTheme(
-            titleTextStyle: GoogleFonts.pacifico(
-              fontSize: 30,
-              fontWeight: FontWeight.w300,
-              color: Appcolors.bcolor,
-            ),
-          ),
-        ),
-        debugShowCheckedModeBanner: false,
-        home: ScreenTypeLayout(
-          mobile: HomepageMobile(),
-          tablet: HomepageTablet(),
-          desktop: HomepageDesktop(),
-        ));
+      theme: apptheme(),
+      debugShowCheckedModeBanner: false,
+      home: const RootApp(),
+    );
   }
 }
